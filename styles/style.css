@@ -71,7 +71,6 @@ header {
 .cover {
     width: 100%;
     margin-top: 96px;
-    min-height: 757px;
     position: relative;
     background-image: url(../images/cover.jpg); 
     background-size: cover;
@@ -91,7 +90,6 @@ header {
 }
 
 .cover-title {
-    margin-top: 7px;
     z-index: 2;
     display: block;
     position: relative;
@@ -102,32 +100,40 @@ header {
     font-size: 100px;
     font-weight: 700;
     line-height: 100%;
-    letter-spacing: 30px;
     text-transform: uppercase;
     color: #fff;
 
 }
 
 .letter-spacing-extended {
-    margin-left: -23px;
+    letter-spacing: 60px;
 }
 
 .no-letter-spacing-extended {
-    margin: -28px;
+    letter-spacing: 0;
+}
+/* Я так и не понял, как сделать letter-spacing отдельно для букв "ад", как вы писали раньше, не нужно для таких мелочей делать отдельный класс,
+чтобы не нагружать код, это единстенное решение докоторого я дошел, через flex */
+.letter-spacing-extra {
+    letter-spacing: 30px;
 }
 
 .aligned-text{
     display: block;
+    letter-spacing: 4px;
 }
 
-.aligned-text_center{
-    margin-left: -28px;
+.aligned-text_center {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 30px;
     text-align: center;
     margin-top: 29px;
 }
 
 .aligned-text_right{
-    text-align: right;
+    display: flex;
+    justify-content: end;
     margin-top: 20px;
 }
 
@@ -139,6 +145,7 @@ header {
     justify-content: space-between;
     z-index: 2;
     padding-bottom: 51px;
+    margin-top: 134px;
 }
 
 .cover__description-text {
@@ -324,18 +331,6 @@ header {
     text-transform: uppercase;
 }
 
-.text1 {
-    letter-spacing: 0.4px;
-}
-
-.text2 {
-    letter-spacing: -0.2px;
-}
-
-.text3 {
-    letter-spacing: 2.6px;
-}
-
 .footer {
     margin-left: 50px;
     width: 1000px;
@@ -347,7 +342,7 @@ header {
 .footer__menu {
     color: #000;
     text-align: center;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -357,7 +352,7 @@ header {
 
 .footer-adress {
     color: #000;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
